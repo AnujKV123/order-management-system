@@ -5,21 +5,29 @@ export const OrderFormSchema = z.object({
     addressLine: z
       .string()
       .nonempty("address line is required")
-      .min(4, { message: "address line must be at least 4 characters" }),
+      .refine((value) => value.trim().length >= 4, {
+        message: "address line must be at least 4 characters",
+      }),
     city: z
       .string()
       .nonempty("city is required")
-      .min(2, { message: "city must be at least 2 characters" }),
+      .refine((value) => value.trim().length >= 2, {
+        message: "city must be at least 2 characters",
+      }),
     country: z
       .string()
       .nonempty("country is required")
-      .min(2, { message: "country must be at least 2 characters" }),
+      .refine((value) => value.trim().length >= 2, {
+        message: "country must be at least 2 characters",
+      }),
   }),
   customer: z.object({
     fullName: z
       .string()
       .nonempty("full name is required")
-      .min(4, { message: "full name must be at least 4 characters" }),
+      .refine((value) => value.trim().length >= 4, {
+        message: "full name must be at least 4 characters",
+      }),
     email: z
       .string()
       .email("invalid email")
