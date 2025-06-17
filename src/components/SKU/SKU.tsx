@@ -121,7 +121,7 @@ export const SKUComp = () => {
         <Modal
           isOpen={open}
           onClose={() => setOpen(false)}
-          title="Custom Modal"
+          title="Add SKU"
           closeOnEsc
           closeOnOutsideClick
         >
