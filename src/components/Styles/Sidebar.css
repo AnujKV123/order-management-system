@@ -17,6 +17,7 @@
   border-right: 1px solid #eee;
   transition: width var(--transition-speed);
   height: 100vh;
+  position: fixed;
 }
 
 .sidebar.collapsed {

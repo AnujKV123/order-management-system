@@ -206,8 +206,12 @@ export const CreateOrder = () => {
         </div>
 
         <div className="actions">
-          <Button onClick={resetForm}>Reset</Button>
-          <Button type="submit">Create Order</Button>
+          <Button variant="outline" size="md" onClick={resetForm}>
+            Reset
+          </Button>
+          <Button variant="primary" size="md" type="submit">
+            Create Order
+          </Button>
         </div>
       </form>
     </div>

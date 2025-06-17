@@ -41,14 +41,16 @@ const Routing: React.FC = () => {
   return (
     <Router>
       <div style={{ display: "flex" }}>
-        <Sidebar
-          items={menuItems}
-          activeItem={active}
-          onItemSelect={(label) => {
-            handleSelect(label);
-          }}
-        />
-        <div style={{ flexGrow: 1, padding: "1rem" }}>
+        <div style={{ width: "17%" }}>
+          <Sidebar
+            items={menuItems}
+            activeItem={active}
+            onItemSelect={(label) => {
+              handleSelect(label);
+            }}
+          />
+        </div>
+        <div style={{ flexGrow: 1, padding: "1rem", width: "83%" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/sku" element={<SKUComp />} />
