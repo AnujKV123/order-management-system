@@ -217,7 +217,7 @@ export const ManageOrder = () => {
         ]}
         filterOptions={[
           { label: "All", value: "all" },
-          { label: "New", value: "new" },
+          { label: "New", value: "New" },
           { label: "Delivered", value: "Delivered" },
           { label: "Cancelled", value: "Cancelled" },
         ]}
